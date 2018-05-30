@@ -13,7 +13,7 @@ plot3(X(:,1),X(:,2),X(:,3),'.');
 title 'Randomly Generated Data';
 num_of_cluster=3;
 [idx,C] = kmeans(X,num_of_cluster,'Distance','cityblock');  % idx shows which observation belongs to which class and C shows the position of the centroid.
-%thats why for 2 cluster and 2 dimensional data, C is 2*2 matrix
+%thats why for 3 cluster and 3 dimensional data, C is 3*3 matrix
 
 %take test point
 
@@ -44,7 +44,7 @@ hold off
 %calculate distance from test point to all centroid
 
 
-centroid=distance_from_testpoint_to_centroid(num_of_cluster,t,C); %it gives index nearest centroid
+centroid=distance_from_testpoint_to_centroid(num_of_cluster,t,C); %it gives index of nearest centroid
 
 position_of_centroid=C(centroid(1),:); %first index will give the nearest centroid(one centroid)
 
